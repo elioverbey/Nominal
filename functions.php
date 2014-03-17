@@ -52,6 +52,9 @@ remove_theme_support( 'genesis-footer-widgets', 1 );
 //* Remove the entry meta in the entry footer (requires HTML5 theme support)
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
+//* Remove the author box on single posts HTML5 Themes
+remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
+
 //* Remove the header right widget area
 unregister_sidebar( 'header-right' );
 
