@@ -19,6 +19,8 @@ function nominal_add_body_class( $classes ) {
    return $classes;
    
 }
+//* Remove the Nav
+remove_theme_support( 'genesis-menus' );
 
 //* Force full width content layout
 add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );

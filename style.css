@@ -82,6 +82,7 @@ input[type="search"] {
 /* Float Clearing
 --------------------------------------------- */
 
+.author-box:before,
 .clearfix:before,
 .entry:before,
 .entry-content:before,
@@ -95,6 +96,7 @@ input[type="search"] {
 	display: table;
 }
 
+.author-box:after,
 .clearfix:after,
 .entry:after,
 .entry-content:after,
@@ -119,12 +121,15 @@ Defaults
 
 body {
 	background-color: #fff;
-	color: #000;
-	font-family: 'Sorts Mill Goudy', sans-serif;
-	font-size: 22px;
+	color: #333;
+	font-family: Merriweather, serif;
+	font-size: 18px;
 	font-weight: 400;
-	line-height: 1.5;
+	letter-spacing: 0.3px;
+	line-height: 1.625;
+	margin: 0;
 	-webkit-font-smoothing: antialiased;
+
 }
 
 a,
@@ -211,7 +216,7 @@ h4,
 h5,
 h6 {
 	color: #000;
-	font-family: Montserrat, sans-serif;
+	font-family: Lato, sans-serif;
 	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 20px;
@@ -307,7 +312,7 @@ input[type="submit"] {
 	border: none;
 	color: #fff;
 	cursor: pointer;
-	font-family: Montserrat, sans-serif;
+	font-family: Lato, sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -448,9 +453,18 @@ Common Classes
 	float: left;
 }
 
+.author-box .avatar {
+	height: 90px;
+	width: 90px;
+}
+
 .entry-comments .avatar {
 	height: 60px;
 	width: 60px;
+}
+
+.author-box .avatar {
+	margin-right: 24px;
 }
 
 .alignright .avatar {
@@ -471,7 +485,8 @@ Common Classes
 	padding-bottom: 10px;
 }
 
-.archive-description {
+.archive-description,
+.author-box {
 	border-bottom: 1px solid #000;
 	border-top: 1px solid #000;
 	font-size: 20px;
@@ -479,7 +494,13 @@ Common Classes
 	padding: 40px 0;
 }
 
-.archive-description p:last-child {
+.author-box-title {
+	font-size: 22px;
+	margin-bottom: 8px;
+}
+
+.archive-description p:last-child,
+.author-box p:last-child {
 	margin-bottom: 0;
 }
 
@@ -525,6 +546,63 @@ Common Classes
 	color: #185bac;
 }
 
+/* Genesis eNews Extended
+--------------------------------------------- */
+
+.enews-widget {
+	background-color: #222;
+	padding: 10px 0;
+	padding: 1rem 0;
+}
+
+.enews p {
+	font-family: Lato, sans-serif;
+	color: #c3e7fe;
+	display: block;
+	margin-top: 20px;
+	margin-top: 2rem;
+	font-size: 80%;
+	text-align: center;
+}
+
+.enews-widget .widget-title {
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 2.2em;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 1;
+	text-transform: capitalize;
+}
+
+.enews-widget input {
+	margin-bottom: 16px;
+	margin-bottom: 1.6rem;
+	font-family: Lato, sans-serif;
+	font-weight: 100;
+	color: #666;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	width: 99%;
+}
+
+.enews-widget input:focus {
+	border: 1px solid #ddd;
+}
+
+.enews-widget input[type="submit"] {
+	background-color: #f15123;
+	color: #fff;
+	margin: 0;
+	width: 100%;
+}
+
+.enews-widget input:hover[type="submit"] {
+	background-color: #fff;
+	color: #333;
+}
+
 
 /* WordPress
 --------------------------------------------- */
@@ -532,6 +610,8 @@ Common Classes
 .alignleft {
 	float: left;
 	text-align: left;
+	border-bottom: 2px solid #185bac;
+	opacity: 0.8;
 }
 
 .alignright {
@@ -606,7 +686,7 @@ Site Header
 }
 
 .site-title {
-	font-family: Montserrat, sans-serif;
+	font-family: Lato, sans-serif;
 	font-size: 30px;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -633,7 +713,7 @@ Site Navigation
 
 .genesis-nav-menu {
 	color: #fff;
-	font-family: Montserrat, sans-serif;
+	font-family: Lato, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -653,7 +733,7 @@ Site Navigation
 .genesis-nav-menu a {
 	color: #fff;
 	display: block;
-	font-family: Montserrat, sans-serif;
+	font-family: Lato, sans-serif;
 	padding: 27px 20px;
 }
 
@@ -764,11 +844,10 @@ p.entry-meta {
 }
 
 .entry-header::after {
-	border-bottom: 1px solid #000;
 	content: "";
 	display: block;
 	margin: 0 auto 60px;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 	width: 25%;
 }
 
@@ -776,6 +855,51 @@ p.entry-meta {
 	content: "\2014";
 	margin: 0 6px 0 2px;
 }
+
+
+/* Entry Meta
+--------------------------------------------- */
+
+p.entry-meta {
+	font-size: 16px;
+	margin-bottom: 0;
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+}
+
+.entry-header {
+	text-align: center;
+}
+
+.entry-author::before,
+.entry-time::before {
+	display: inline-block;
+	font: normal 20px/1 'dashicons';
+	margin-right: 5px;
+	margin-top: 2px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+}
+
+.entry-author,
+.entry-time {
+	margin: 0 10px;
+}
+
+.entry-categories,
+.entry-tags {
+	display: block;
+}
+
+.entry-author::before {
+	content: "\f110";
+}
+
+.entry-time::before {
+	content: "\f469";
+}
+
+
 
 
 /* Pagination
@@ -795,7 +919,7 @@ p.entry-meta {
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
-	font-family: Montserrat, sans-serif;
+	font-family: Lato, sans-serif;
 	font-size: 14px;
 	letter-spacing: 1px;
 	padding: 8px 12px;
@@ -916,22 +1040,22 @@ Site Footer
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #000;
+	background-color: #fff;
 	padding: 40px 0;
 	text-align: center;
 }
 
 .site-footer a,
 .site-footer p {
-	color: #fff;
-}
-
-.site-footer a:hover {
 	color: #000;
 }
 
+.site-footer a:hover {
+	color: #333;
+}
+
 .site-footer p {
-	font-family: Montserrat, sans-serif;
+	font-family: Lato, sans-serif;
 	font-size: 12px;
 	letter-spacing: 1px;
 	margin-bottom: 0;
@@ -943,24 +1067,8 @@ Site Footer
 Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
+
 @media only screen and (max-width: 1139px) {
-
-	.site-inner,
-	.wrap {
-		max-width: 960px;
-	}
-	.content {
-		width: 520px;
-	}
-
-	.full-width-content .content {
-		padding: 0 110px;
-	}
-
-
-}
-
-@media only screen and (max-width: 1023px) {
 
 	.site-inner,
 	.wrap {
