@@ -83,7 +83,9 @@ unregister_sidebar( 'header-right' );
 /** Remove default sidebar */
 remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 
-//* Unregister secondary sidebar
+/** Remove secondary sidebar */
+unregister_sidebar( 'header-right' );
+unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
 
 //* Unregister layout settings
