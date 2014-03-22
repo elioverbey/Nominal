@@ -27,7 +27,8 @@ All you need to do is create a custom menu and add it to the primary navigation.
 3. Activate the Nominal theme.
 4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
 
-## NO WIDGET AREAS
+## WIDGET AREAS
+Full Width Footer Widget for eNews
 
 ## NO BACKGROUND IMAGES
 
