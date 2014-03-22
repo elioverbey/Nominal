@@ -308,7 +308,7 @@ input[type="radio"] {
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background-color: #000;
+	background-color: #222;
 	border: none;
 	color: #fff;
 	cursor: pointer;
@@ -489,7 +489,7 @@ Common Classes
 .author-box {
 	border-bottom: 1px solid #000;
 	border-top: 1px solid #000;
-	font-size: 20px;
+	font-size: 18px;
 	margin-bottom: 100px;
 	padding: 40px 0;
 }
@@ -576,33 +576,46 @@ Common Classes
 	text-transform: capitalize;
 }
 
-.enews-widget input {
-	margin-bottom: 16px;
-	margin-bottom: 1.6rem;
-	font-family: Lato, sans-serif;
-	font-weight: 100;
-	color: #666;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	width: 99%;
+form#subscribe {
+	background: #fff;
+	width: 50%;
+	display: block;
+	margin: 0 auto;	
 }
-
-.enews-widget input:focus {
-	border: 1px solid #ddd;
+.enews-widget input {
+	background-color: #fff;
+	color: #333;
+	font-family: 'lato', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	width: 77%;
+	border: none;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
 }
 
 .enews-widget input[type="submit"] {
-	background-color: #f15123;
+	background-color: #185bac;
+	border: none;
+	box-shadow: none;
 	color: #fff;
-	margin: 0;
-	width: 100%;
+	cursor: pointer;
+	font-family: 'proxima-nova', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin: 2px 1px 2px 0px;
+	padding: 20px;
+	text-transform: uppercase;
+	width: 21.8%;
+	-webkit-font-smoothing: antialiased;
 }
 
 .enews-widget input:hover[type="submit"] {
-	background-color: #fff;
-	color: #333;
+	background-color: #185bac;
+	opacity: .8;
+	color: #fff;
 }
-
 
 /* WordPress
 --------------------------------------------- */
@@ -610,9 +623,9 @@ Common Classes
 .alignleft {
 	float: left;
 	text-align: left;
-	border-bottom: 2px solid #185bac;
 	opacity: 0.8;
 }
+
 
 .alignright {
 	float: right;
@@ -1120,6 +1133,19 @@ Media Queries
 	.two-thirds {
 		margin: 0;
 		width: 100%;
+	}
+	.enews-widget input,
+	.enews-widget input[type="submit"] {
+	width: 100%;
+	}
+	
+	.enews-widget input[type="submit"] {
+	margin: 0 0px;
+	border: none;
+	}
+	
+	.enews-widget input {
+		text-align: center;
 	}
 
 }

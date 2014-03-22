@@ -13,9 +13,7 @@ function Nominal_enqueue_scripts_styles() {
 
 	wp_enqueue_script( 'Nominal-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style( 'Nominal-google-fonts', '//fonts.googleapis.com/css?family=Montserrat|Sorts+Mill+Goudy', array(), CHILD_THEME_VERSION );
-	wp_enqueue_style( 'google-font-lato', '//fonts.googleapis.com/css?family=Merriweather:400,700|Lato:300,400,900', array(), CHILD_THEME_VERSION );
-
+	wp_enqueue_style( 'Nominal-google-fonts', '//fonts.googleapis.com/css?family=Montserrat|Sorts+Mill+Goudy|Lato:300,400,900|Merriweather:400,700', array(), CHILD_THEME_VERSION );
 }
 
 //* Add new featured image sizes
