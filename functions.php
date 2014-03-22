@@ -78,10 +78,10 @@ function sp_post_info_filter($post_info) {
 //* Remove the header right widget area
 unregister_sidebar( 'header-right' );
 
-/** Remove default sidebar */
+//* Remove default sidebar 
 remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 
-/** Remove secondary sidebar */
+//* Remove secondary sidebar 
 unregister_sidebar( 'header-right' );
 unregister_sidebar( 'sidebar' );
 unregister_sidebar( 'sidebar-alt' );
@@ -103,7 +103,7 @@ add_theme_support( 'genesis-structural-wraps', array(
 ) );
 
 
-/** Add post navigation (requires HTML5 support) */
+//* Add post navigation (requires HTML5 support) 
 add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 10 );
 
 //* Register Email Widget
