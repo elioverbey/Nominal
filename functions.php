@@ -93,6 +93,9 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 
+//* Force full-width-content layout setting
+add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+
 //* Add support for structural wraps
 add_theme_support( 'genesis-structural-wraps', array(
 	'header',
